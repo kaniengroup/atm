@@ -29,6 +29,7 @@ class Agenda extends CI_Controller
         $data['nbre_page'] = $nbre_page;
         $data['nbre_article_derniere_page'] = $nbre_article_derniere_page;
 
+        $data['titre_page'] = "ATM";
         $data['page']='agenda';
         $this->load->view('pages/main_layout',$data);
     }

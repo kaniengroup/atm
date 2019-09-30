@@ -43,6 +43,20 @@ class Chargement_data_model extends CI_Model
 
 	}
 
+	public function get_list_blog()
+	{
+		// Chargement du solde
+		$query = $this->db->query("select * from blog order by date_pub ASC");
+		$infos['list_blog'] = $query->result_array();
+		$infos['nbre_blog'] = $query->num_rows();
+		// Chargement du solde
+
+		$query->free_result();
+
+		return $infos;
+
+	}
+
 	public function get_list_actualite_recents()
 	{
 
@@ -99,7 +113,7 @@ class Chargement_data_model extends CI_Model
 	// Fin infos user
 
 	// Debur infos pub
-	public function get_pub_info($id_pub)
+	public function get_article_info($id_pub)
 	{
 		// Chargement du solde
 		$query = $this->db->query("select * from article where id=$id_pub");
@@ -113,6 +127,21 @@ class Chargement_data_model extends CI_Model
 	}
 	// Fin infos pub
 
-	
-	
+	// Debur infos pub
+	public function get_blog_info($id_pub)
+	{
+		// Chargement du solde
+		$query = $this->db->query("select * from blog where id=$id_pub");
+		$infos_pub = $query->result_array();
+		// Chargement du solde
+
+		$query->free_result();
+
+		return $infos_pub;
+
+	}
+	// Fin infos pub
+
+
+
 }

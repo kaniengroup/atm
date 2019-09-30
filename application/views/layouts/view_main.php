@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?/*= $titre_page; */?></title>
+    <title><?= $titre_page; ?></title>
 
     <!-- Bootstrap core CSS-->
     <link rel="stylesheet" href="<?= css_url('assets/vendor/bootstrap/css/','bootstrap.min'); ?>">
@@ -39,7 +39,7 @@
       <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
         <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle text-white" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <?= (isset($nomComplet) && isset($nomComplet)) ? $nomComplet : 'XXXXXXX' ; ?> 
+            <?= (isset($nomComplet) && isset($nomComplet)) ? $nomComplet : 'XXXXXXX' ; ?>
             <i class="fas fa-user-circle fa-fw"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
@@ -66,6 +66,12 @@
           <a class="nav-link" href="<?= site_url('dashboard','gestion_article'); ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Gestion article</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="<?= site_url('dashboard','gestion_blog'); ?>">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Gestion Blog</span>
           </a>
         </li>
         <li class="nav-item dropdown">
@@ -140,7 +146,6 @@
     <script src="<?= js_url('assets/vendor/jquery-easing/','jquery.easing.min'); ?>"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="<?= js_url('assets/vendor/chart.js/','Chart.min'); ?>"></script>
     <script src="<?= js_url('assets/vendor/datatables/','jquery.dataTables'); ?>"></script>
     <script src="<?= js_url('assets/vendor/datatables/','dataTables.bootstrap4'); ?>"></script>
 
@@ -152,7 +157,6 @@
 
     <!-- Demo scripts for this page-->
     <script src="<?= js_url('assets/js/demo/','datatables-demo'); ?>"></script>
-    <script src="<?= js_url('assets/js/demo/','chart-area-demo'); ?>"></script>
 
     <!-- Script page en cours -->
     <?php if (isset($js_page) && $js_page!=""): ?>

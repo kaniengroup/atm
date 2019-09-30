@@ -24,7 +24,7 @@ $('#form_add_pub').validate({
             required : '<div class="alert alert-danger">Veuillez remplir le champ SVP</div>',
             valid : '<div class="alert alert-success">Valide</div>'
         },
-        etat_article : {
+        etat_blog : {
             required : '<div class="alert alert-danger">Veuillez remplir le champ SVP</div>',
             valid : '<div class="alert alert-success">Valide</div>'
         },
@@ -68,7 +68,7 @@ $('#form_update_pub').validate({
             required : '<div class="alert alert-danger">Veuillez remplir le champ SVP</div>',
             valid : '<div class="alert alert-success">Valide</div>'
         },
-        etat_article_m : {
+        etat_blog_m : {
             required : '<div class="alert alert-danger">Veuillez remplir le champ SVP</div>',
             valid : '<div class="alert alert-success">Valide</div>'
         },
@@ -101,7 +101,7 @@ function get_pub_info(id_pub=0) {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: lien_site+"charge_data_pubs/get_article_info",
+            url: lien_site+"charge_data_pubs/get_blog_info",
             data: {postID_pub:id_pub},
             success: function(data){
                 var pub_data = data;
@@ -112,7 +112,7 @@ function get_pub_info(id_pub=0) {
                     $('#contenu_i').text(pub['contenu']);
                     $('#compte_i').val(pub['user']);
                     $('#date_creation_i').val(pub['date_creation']);
-                    $('#etat_article_i').val(pub['etat']);
+                    $('#etat_blog_i').val(pub['etat']);
                     $('#date_pub_i').val(pub['date_pub']);
                     $('#periode_debut_i').val(pub['periode_pub_debut']);
                     $('#periode_fin_i').val(pub['periode_pub_fin']);
@@ -142,7 +142,7 @@ function get_pub_info2(id_pub=0) {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: lien_site+"charge_data_pubs/get_article_info",
+            url: lien_site+"charge_data_pubs/get_blog_info",
             data: {postID_pub:id_pub},
             success: function(data){
                 var pub_data = data;
@@ -154,7 +154,7 @@ function get_pub_info2(id_pub=0) {
                     $('#contenu_m').text(pub['contenu']);
                     $('#compte_m').val(pub['user']);
                     $('#date_creation_m').val(pub['date_creation']);
-                    $('#etat_article_m').val(pub['etat']);
+                    $('#etat_blog_m').val(pub['etat']);
                     $('#date_pub_m').val(pub['date_pub']);
                     $('#periode_debut_m').val(pub['periode_pub_debut']);
                     $('#periode_fin_m').val(pub['periode_pub_fin']);
@@ -215,11 +215,11 @@ function get_pub_id(id_pub, titre_pub) {
 }
 
 
-$('#etat_article').change(function () {
+$('#etat_blog').change(function () {
 
-   var etat_article = $(this).val();
+   var etat_blog = $(this).val();
 
-   if (etat_article=="Publier") {
+   if (etat_blog=="Publier") {
         $('#periode_publication').hide(500);
 
         $("#periode_debut").val("9999-99-99");
@@ -227,7 +227,7 @@ $('#etat_article').change(function () {
 
         $("#date_pub").val("");
         $('#date_publication').show(500);
-   } else if (etat_article=="Ne pas publier") {
+   } else if (etat_blog=="Ne pas publier") {
         $('#date_publication').hide(500);
         $('#periode_publication').hide(500);
 
@@ -235,7 +235,7 @@ $('#etat_article').change(function () {
         $("#periode_debut").val("9999-99-99");
         $("#periode_fin").val("9999-99-99");
 
-   } else if (etat_article=="Publier sur une période") {
+   } else if (etat_blog=="Publier sur une période") {
         $('#date_publication').hide(500);
 
         $("#date_pub").val("9999-99-99");
@@ -247,11 +247,11 @@ $('#etat_article').change(function () {
 
 });
 
-$('#etat_article_m').change(function () {
+$('#etat_blog_m').change(function () {
 
-   var etat_article = $(this).val();
+   var etat_blog = $(this).val();
 
-   if (etat_article=="Publier") {
+   if (etat_blog=="Publier") {
         $('#periode_publication_m').hide(500);
 
         $("#periode_debut_m").val("9999-99-99");
@@ -259,7 +259,7 @@ $('#etat_article_m').change(function () {
 
         $("#date_pub_m").val("");
         $('#date_publication_m').show(500);
-   } else if (etat_article=="Ne pas publier") {
+   } else if (etat_blog=="Ne pas publier") {
         $('#date_publication_m').hide(500);
         $('#periode_publication_m').hide(500);
 
@@ -267,7 +267,7 @@ $('#etat_article_m').change(function () {
         $("#periode_debut_m").val("9999-99-99");
         $("#periode_fin_m").val("9999-99-99");
 
-   } else if (etat_article=="Publier sur une période") {
+   } else if (etat_blog=="Publier sur une période") {
         $('#date_publication_m').hide(500);
 
         $("#date_pub_m").val("9999-99-99");

@@ -29,6 +29,7 @@ class Actualites extends CI_Controller
         $data['nbre_article_derniere_page'] = $nbre_article_derniere_page;
 
 
+        $data['titre_page'] = "ATM";
         $data['page']='actualites';
         $this->load->view('pages/main_layout',$data);
     }

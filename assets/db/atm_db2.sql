@@ -28,6 +28,11 @@ SET time_zone = "+00:00";
 -- Structure de la table `article`
 --
 
+
+create database atm_db;
+
+use atm_db;
+
 CREATE TABLE `article` (
   `id` int(11) NOT NULL,
   `titre` varchar(100) NOT NULL,

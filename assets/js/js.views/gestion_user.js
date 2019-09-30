@@ -1,5 +1,5 @@
 
-var lien_site = 'http://localhost:80/atm/';
+var lien_site = 'http://localhost/atm-v2/';
 
 
 // Validation du formulaire

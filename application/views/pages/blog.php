@@ -27,7 +27,7 @@
                                 $valeur_finale = 0;
                                 for ($i=1; $i <= $nbre_page; $i++) { 
                                 ?>
-                                    <div id="<?= 'page_'.$i; ?>" class="row  view_page">
+                                    <div id="<?= 'page_'.$i; ?>" class="row view_page">
                                     <?php
                                     // $valeur_initiale = $nbre_article_par_page*($i-1)+1;
                                     // $valeur_finale = $valeur_initiale + $nbre_article_par_page -1;

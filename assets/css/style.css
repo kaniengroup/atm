@@ -1,0 +1,578 @@
+/*.link_img{
+    cursor: pointer;
+}*/
+.title_article_one{
+
+}
+
+.text_one_actu{
+   text-align: center;
+    margin-top: 25%;
+}
+
+div.size_container_article{
+    font-size: 20px;
+}
+
+li.nav-item{
+    font-size: 500px;
+}
+ul#myTab{
+    font-family: "ApexNew-Medium";
+    font-size: 95px;
+}
+li.nav-item a{
+
+    font-family: "ApexNew-Medium";
+    font-size: 200px;
+}
+
+.nav-tabs .nav-link {
+    color: #3e4f69;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #3e4f69;
+}
+.nav-tabs:not([class*="nav-tabs--"]) .nav-link.active {
+    color: #616d80 !important;
+    background-color: #dcdbdb ;
+}
+.bg_container_actuality{
+    background-color: #fff;
+}
+.img_first_article{
+    z-index: -1;
+
+}
+h3.article_first{
+    color: blue;
+    position: fixed;
+    z-index: 1;
+    margin-top: 30px;
+}
+.logo_officiel_ATM{
+    z-index: 1;
+    width: 125px;
+    height: 100px;
+    left:10;
+    position: absolute;
+   margin-bottom:95px;
+
+
+}
+div.container_menu{
+    padding-top: 12px;
+}
+ul.menu_principal li {
+    display: inline;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    color: white !important;
+
+}
+ul.menu_principal li a{
+    list-style-type: none;
+    color: white;
+}
+
+ul.menu_principal li a:hover{
+    list-style-type: none;
+    color: #ff7d1f;
+}
+
+h2.actuality{
+    /*display: inline-block;*/
+    /*margin-bottom: -60px;*/
+    /*z-index: 1;*/
+
+}
+
+.menu_principal {
+
+}
+
+.carousel-indicators .active {
+
+    opacity: 1;
+    background-color: #ff7d1f;
+
+}
+
+.read_more{
+    cursor: pointer;
+}
+img.polygone_read_more{
+    cursor: pointer;
+}
+body{
+    font-family: 'ApexNew-Book';
+}
+h2{
+    font-family: 'ApexNew-Medium';
+
+    /*font-weight: normal;*/
+
+}
+.follow {
+    background: url("../img/rect_follow_me.png") no-repeat;
+     font-family: 'ApexNew-Book';
+}
+
+.right{
+text-align: right
+}
+.fb-color {
+    background: #3e4f69;
+}
+
+.fb-color:hover {
+    background-color:  ;
+    color: #3e4f69;
+}
+
+.tw-color {
+    color: #3e4f69;
+}
+
+
+.navbar-brand {
+    max-height: 40px;
+}
+
+.navbar-brand > .logo {
+    margin-left: 45px;
+    margin-top: -15px;
+    height:100px;
+    z-index: 1;
+}
+
+.citation {
+    font-size: 22px;
+    font-family: 'ApexNew-Book';
+    font-weight: normal;
+}
+
+.author {
+    color:#ff7d1f;
+}
+
+.separator {
+    color:#cdeafc;
+    border: 2px solid #cdeafc;
+    width:50%
+}
+
+.separator_actu {
+    color: #ffffff;
+    width: 100%;
+    border: 6px solid #fff;
+}
+
+.title_one {
+    display: inline-block;
+    color: #cdeafc !important;
+}
+
+.text_who_is {
+    font-size: 16px;
+}
+
+.read_more {
+    font-size: 18px;
+}
+.read_more ::after{
+   /* content: url('../img/polygone.png') ;*/
+}
+
+.actu-border {
+    border-right: 12px solid #ffffff;
+}
+
+.actu-border-bottom {
+    border-bottom: 12px solid #ffffff;
+    widows: 100px;
+}
+
+.article-img {
+
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.article-ct  {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.
+    com/gradient-editor/#ffffff+0,3e4f69+100&0+0,1+100 */
+    /*background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(62,79,105,1) 100%); /!* FF3.6-15 *!/
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(62,79,105,1) 100%); /!* Chrome10-25,Safari5.1-6 *!/
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(62,79,105,1) 100%); /!* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#3e4f69',GradientType=0 ); /!* IE6-9 *!/*/
+}
+
+.bg_article_liste {
+    background: #e6e8e9;
+}
+.article_principal{
+    font-family: "ApexNew-Book";
+    font-size: 18px;
+    color: white;
+
+}
+
+.share_social_media{
+    font-family: "ApexNew-Medium";
+    font-size: 20px;
+    color:  #3e4f69;;
+}
+header  .admin_bg{
+    background-color: #3e4f69 !important;
+}
+
+@media screen and (max-width: 1357px) {
+    .follow{
+        background: url("../img/rect_follow_me.png") no-repeat;
+        background-size: 100% 100%;
+
+    }
+
+}
+
+
+@media screen and (max-width: 983px) {
+    .fb-color{
+        /*display: block;
+         margin-left: 75px;*/
+
+    }
+
+    .tw{
+        /*display: block;
+        margin-left: 75px;*/
+    }
+    .follow{
+
+        background: url("../img/rect_follow_me.png") no-repeat;
+        background-size: 200px 300px;
+    }
+
+    .follow_me{
+
+    }
+
+    .container_header{
+
+    }
+
+    .logo_officiel_ATM{
+        width: 22%;
+        /*display: none;*/
+        /*width:15%;*/
+        /*height:120%;*/
+        z-index: 10;
+        /*width: 125px;*/
+        /*height: 100px;*/
+        position: absolute;
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width:987px )  {
+    .follow{
+        background: url("../img/rect_follow_me.png") no-repeat;
+        background-size: auto;
+        background-size: 105% 100%;
+    }
+
+    .follow_me{
+        display: none !important;
+
+    }
+
+}
+
+@media screen and (max-width: 938px){
+    .follow {
+
+        background: url("../img/rect_follow_me.png") no-repeat;
+        background-size: auto;
+        background-size: auto;
+        background-size: 105% 100%;
+
+    }
+
+}
+@media screen and (max-width:760px ){
+    ul.menu_principal li{
+
+    }
+
+    ul.menu_principal{
+
+    }
+}
+@media screen and (max-width: 763px){
+    .follow{
+        background: url("../img/rect_follow_me.png") no-repeat;
+        background-size: auto;
+        background-size: auto;
+        background-size: 105% 100%;
+
+    }
+    ul.menu_principal li  {
+        padding: 5px;
+        /*text-align: center;*/
+    }
+    ul.menu_principal li a {
+        font-size: 11px;
+        text-align: center;
+        /*text-align: center;*/
+
+    }
+
+
+
+}
+
+/*@media screen and (max-width: 766px) {
+    ul.menu_principal li  {
+
+
+
+    }
+    ul.menu_principal li a {
+
+        /!*text-align: center;*!/
+
+    }
+    .logo_officiel_ATM{
+        display: none;
+    }
+}*/
+@media screen and (max-width: 767px){
+    .follow{
+        background: url("../img/rect_follow_me.png") no-repeat;
+        background-size: auto;
+        background-size: auto;
+        background-size: 105% 100%;
+
+    }
+    ul.menu_principal li  {
+
+        /*padding: 2px;
+        font-size: 10px;
+        text-align: center;*/
+    }
+    ul.menu_principal li a {
+
+        /*text-align: center;*/
+
+    }
+
+    .menu_principal{
+        font-size: 6px !important;
+    }
+    .logo_officiel_ATM{
+
+    }
+
+}
+@media screen and (max-width: 752px ) {
+    .logo_officiel_ATM{
+        width: 22%;
+        z-index: 10;
+        position: absolute;
+        margin-top: 1px;
+        margin-left: -14px;
+
+
+    }
+
+
+    ul.menu_principal li{
+        font-size: 20px;
+        float: left;
+    }
+
+    ul.menu_principal li a{
+
+    }
+}
+
+@media screen and (max-width: 716px) {
+    ul.menu_principal li{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 984px) {
+    div.container_menu {
+        padding-top: 12px;
+    }
+
+    ul.menu_principal li {
+        display: inline;
+        font-size: 18px;
+        padding: 10px;
+        text-align: center;
+        color: white !important;
+
+    }
+
+    ul.menu_principal li a {
+        list-style-type: none;
+        color: white;
+    }
+
+    ul.menu_principal li a:hover {
+        list-style-type: none;
+        color: #ff7d1f;
+    }
+}
+@media screen and (max-width: 547px) {
+    .container_menu{
+        display: none;
+    }
+    .d-flex .justify-content-end{
+        display: none;
+    }
+}
+.img_bg_follow{
+    z-index: ;
+    width:215px ;
+    right: 0;
+    height: 44px;
+    position: absolute;
+}
+
+
+
+@media screen and (max-width: 498px ) {
+    .logo_officiel_ATM{
+    :100% ;
+    }
+
+    ul.menu_principal li{
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media screen and (max-width: 533px) {
+    ul.menu_principal li{
+        /* display: none;*/
+        font-size: 12px;
+        padding: 4px;
+    }
+
+
+}
+
+@media screen and (max-width:375px ){
+    .logo_officiel_ATM{
+
+    }
+
+    ul.menu_principal li {
+        font-size: 11px;
+        padding: 3px;
+        height:75px;
+        width:150px ;
+    }
+}
+
+@media screen and (max-width: 469px) {
+    .logo_officiel_ATM {
+        height: 85px;
+        width: 95px;
+    }
+}
+
+@media screen and (max-width: 753px) {
+    ul.menu_principal li{
+        font-size: 11px;
+        padding: 3px;
+
+    }
+
+    ul.menu_principal li a{
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+@media (min-width: 304px) {
+    .navbar-expand-lg .navbar-nav .menu_p {
+        padding-right: .5rem;
+        padding-left: .5rem;
+        font-size: 16px;
+        color: white !important;
+    }
+}
+@media (min-width: 576px) {
+    .navbar-expand-lg .navbar-nav .menu_p {
+        padding-right: .5rem;
+        padding-left: .5rem;
+        font-size: 18px;
+        color: white !important;
+    }
+}
+@media (min-width: 768px) {
+    .navbar-expand-lg .navbar-nav .menu_p {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    font-size: 20px;
+        color: white !important;
+} }
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .menu_p {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    font-size: 22px;
+        color: white !important;
+} }
+
+@media (min-width: 1200px) {
+    .navbar-expand-lg .navbar-nav .menu_p {
+        padding-right: .5rem;
+        padding-left: .5rem;
+        font-size: 24px;
+        color: white !important;
+    }
+}
+
+.navbar-light .navbar-toggler {
+    border-color: white !important;
+    color: white !important;
+}
+
+cite{
+    color: #ff7d1f;
+}
+
+.navbar-nav .nav-link:hover{
+    color: #ff7d1f !important;
+}
+
+.carousel-indicators .active {
+
+    background-color: #ff7d1f !important;
+
+}
+
+
+
+

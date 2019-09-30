@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/application/controllers/Accueil.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application/controllers/Actualites.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application/controllers/Portrait.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application/views/pages/_follow_me.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application/views/pages/container_article.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application/views/pages/container_homepage.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application/views/pages/footer.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application/views/pages/header.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application/views/pages/nav_principal.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/css/style.css" charset="UTF-8" />
+  </component>
+</project>

@@ -1,3 +1,5 @@
+
+
 <div class="container">
     <div class="row">  
         <img class="img-fluid" src="<?php echo base_url('assets/img/sliders/slide1.jpg'); ?>" alt="First slide">           

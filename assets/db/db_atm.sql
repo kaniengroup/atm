@@ -43,7 +43,7 @@ create table if not exists `article` (
   foreign key(user) references user(login)  on delete cascade
 ) Engine=Innodb DEFAULT CHARSET=utf8;
 
-create table if not exists `genere_login`( 
+create table if not exists `genere_login`(
   id int not null auto_increment,
   nombre1 char(2) not null,
   nombre2 char(2) not null,

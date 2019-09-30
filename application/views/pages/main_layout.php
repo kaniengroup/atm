@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><?= $titre_page; ?></title>
     <!-- Vendor styles -->
     <link rel="stylesheet" href="<?php echo base_url('assets/calendar/calendar-style.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">

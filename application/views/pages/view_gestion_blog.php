@@ -33,7 +33,7 @@ if (isset($reponse) && $reponse=="true") {
 
         <div class="card">
             <div class="card-body">
-                <button type="button" class="btn btn-dark btn-sm mb-3" data-toggle="modal" data-target="#modal_pub_ajout" title="Ajouter un utilisateur">Ajouter un article</button>
+                <button type="button" class="btn btn-dark btn-sm mb-3" data-toggle="modal" data-target="#modal_pub_ajout" title="Ajouter un utilisateur">Ajouter un blog</button>
 
                 <div class="table-responsive">
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -49,7 +49,7 @@ if (isset($reponse) && $reponse=="true") {
                     </thead>
                     <tbody>
                       <?php
-                      foreach ($list_article as $pub) :
+                      foreach ($list_blog as $pub) :
                       ?>
                         <tr>
                           <td><?= $pub['titre']; ?></td>
@@ -90,7 +90,7 @@ if (isset($reponse) && $reponse=="true") {
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Infos Article</h5>
+                <h5 class="modal-title">Infos blog</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
             <div class="modal-body">
@@ -114,7 +114,7 @@ if (isset($reponse) && $reponse=="true") {
 
                     <div class="form-group">
                         <label for="contenu_i" class="col-form-label col-form-label-sm">Contenu</label>
-                        <div class="pb-article" id="contenu_i"></div>
+                        <div class="pb-blog" id="contenu_i"></div>
                         <!-- <textarea class="form-control form-control-sm" ></textarea> -->
                     </div>
 
@@ -133,8 +133,8 @@ if (isset($reponse) && $reponse=="true") {
                   <div class="col-6">
 
                     <div class="form-group">
-                        <label for="etat_article_i" class="col-form-label col-form-label-sm">Etat</label>
-                        <input class="form-control form-control-sm" type="text" id="etat_article_i" readonly>
+                        <label for="etat_blog_i" class="col-form-label col-form-label-sm">Etat</label>
+                        <input class="form-control form-control-sm" type="text" id="etat_blog_i" readonly>
                     </div>
 
                     <div class="form-group">
@@ -177,12 +177,12 @@ if (isset($reponse) && $reponse=="true") {
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Modifier l'article</h5>
+                <h5 class="modal-title">Modifier le blog</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
             <div class="modal-body">
 
-              <form id="form_update_pub" enctype="multipart/form-data" action="<?= site_url('dashboard','gestion_article/update'); ?>" method="post">
+              <form id="form_update_pub" enctype="multipart/form-data" action="<?= site_url('dashboard','gestion_blog/update'); ?>" method="post">
                 <div class="row justify-content-around">
 
                   <input type="hidden" name="pub_id_m" id="pub_id_m">
@@ -216,8 +216,8 @@ if (isset($reponse) && $reponse=="true") {
                   <div class="col-6">
 
                     <div class="form-group">
-                        <label for="etat_article_m" class="col-form-label col-form-label-sm">Etat</label>
-                        <select data-required="true" data-describedby="etat_article_mHelp" data-description="etat_article_m" class="form-control form-control-sm" name="etat_article_m" id="etat_article_m" aria-describedby="etat_article_mHelp">
+                        <label for="etat_blog_m" class="col-form-label col-form-label-sm">Etat</label>
+                        <select data-required="true" data-describedby="etat_blog_mHelp" data-description="etat_blog_m" class="form-control form-control-sm" name="etat_blog_m" id="etat_blog_m" aria-describedby="etat_blog_mHelp">
                             <option value="" selected="selected">Choisissez un etat</option>
                             <?php
                             foreach ($list_etat as $etat) :
@@ -227,7 +227,7 @@ if (isset($reponse) && $reponse=="true") {
                             endforeach;
                             ?>
                         </select>
-                        <small id="etat_article_mHelp" class="form-text text-muted">Veuillez saissir la nouvelle  valeur dans le champ.</small>
+                        <small id="etat_blog_mHelp" class="form-text text-muted">Veuillez saissir la nouvelle  valeur dans le champ.</small>
                     </div>
 
                     <div class="form-group" id="date_publication_m">
@@ -276,12 +276,12 @@ if (isset($reponse) && $reponse=="true") {
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Ajouter un article</h5>
+                <h5 class="modal-title">Ajouter un blog</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
             <div class="modal-body">
 
-              <form id="form_add_pub" enctype="multipart/form-data" action="<?= site_url('dashboard','gestion_article/add'); ?>" method="post">
+              <form id="form_add_pub" enctype="multipart/form-data" action="<?= site_url('dashboard','gestion_blog/add'); ?>" method="post">
                 <div class="row justify-content-around">
 
                   <div class="col-6">
@@ -313,8 +313,8 @@ if (isset($reponse) && $reponse=="true") {
                   <div class="col-6">
 
                     <div class="form-group">
-                          <label for="etat_article" class="col-form-label col-form-label-sm">Etat</label>
-                          <select data-required="true" data-describedby="etat_articleHelp" data-description="etat_article" class="form-control form-control-sm" name="etat_article" id="etat_article" aria-describedby="etat_articleHelp">
+                          <label for="etat_blog" class="col-form-label col-form-label-sm">Etat</label>
+                          <select data-required="true" data-describedby="etat_blogHelp" data-description="etat_blog" class="form-control form-control-sm" name="etat_blog" id="etat_blog" aria-describedby="etat_blogHelp">
                               <option value="" selected="selected">Choisissez un etat</option>
                               <?php
                               foreach ($list_etat as $etat) :
@@ -324,7 +324,7 @@ if (isset($reponse) && $reponse=="true") {
                               endforeach;
                               ?>
                           </select>
-                          <small id="etat_articleHelp" class="form-text text-muted">Veuillez saissir la nouvelle  valeur dans le champ.</small>
+                          <small id="etat_blogHelp" class="form-text text-muted">Veuillez saissir la nouvelle  valeur dans le champ.</small>
                       </div>
 
                       <!-- <div class="form-group">
@@ -417,7 +417,7 @@ if (isset($reponse) && $reponse=="true") {
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
             <div class="modal-body">
-                <form id="modal_pub_suppr_f" enctype="multipart/form-data" action="<?= site_url('dashboard','gestion_article/delete'); ?>" method="post">
+                <form id="modal_pub_suppr_f" enctype="multipart/form-data" action="<?= site_url('dashboard','gestion_blog/delete'); ?>" method="post">
 
                     <input type="hidden" name="pub_id_s" id="pub_id_s">
                     <p class="text-capitalize text-center m-3">Voulez-vous vraiment supprimer la pub <strong id="pub_titre_supp"></strong>.</p>

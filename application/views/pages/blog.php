@@ -18,23 +18,23 @@
         <header class="container h-100">
             <div class="d-flex align-items-center justify-content-center h-100">
                 <div class="d-flex flex-column col-12">
-                    <div class="row">
+                    <div class="container">
                         <div class="row bg-white justify-content-center">
                             <?php 
                             if ($nbre_article_total>0) {
                             ?>
                                 <?php
-                                $valeur_finale = 0;
+                                $valeur_finale = -1;
                                 for ($i=1; $i <= $nbre_page; $i++) { 
                                 ?>
-                                    <div id="<?= 'page_'.$i; ?>" class="row  view_page">
+                                    <div id="<?= 'page_'.$i; ?>" class="row view_page">
                                     <?php
                                     // $valeur_initiale = $nbre_article_par_page*($i-1)+1;
                                     // $valeur_finale = $valeur_initiale + $nbre_article_par_page -1;
                                     $valeur_initiale = $valeur_finale + 1;
                                     $valeur_finale = $valeur_initiale + ($nbre_article_par_page - 1);
                                     if ($i==$nbre_page) {
-                                        $valeur_finale = $nbre_article_total;
+                                        $valeur_finale = $nbre_article_total - 1; 
                                     }
                                     for ($j=$valeur_initiale; $j <= $valeur_finale; $j++) {
                                     ?>
@@ -42,9 +42,11 @@
                                             <div class="card border border-0">
                                                 <img src="..." class="card-img-top" alt="...">
                                                 <div class="card-body">
-                                                    <h5 class="card-title">Article <?= $j; ?></h5>
-                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                                    <h5 class="card-title"><?= $list_article[$j]['titre']; ?></h5>
+                                                    <p class="card-text">
+                                                        <?= substr($list_article[$j]['contenu'],0,255).' ...'; ?>
+                                                    </p>
+                                                    <a href="#" class="btn btn-primary">Lire...</a>
                                                 </div>
                                             </div>
                                         </div>

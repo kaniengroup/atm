@@ -40,13 +40,13 @@
                                     ?>
                                         <div class="col-md-4 col-sm-6">
                                             <div class="card border border-0">
-                                                <img src="..." class="card-img-top" alt="...">
-                                                <div class="card-body">
+                                                <img src="<?= base_url('assets/img/sliders/slide1.jpg'); ?>" class="card-img-top" alt="...">
+                                                <div class="card-body" style="height: 250px;">
                                                     <h5 class="card-title"><?= $list_article[$j]['titre']; ?></h5>
                                                     <p class="card-text">
                                                         <?= substr($list_article[$j]['contenu'],0,255).' ...'; ?>
                                                     </p>
-                                                    <a href="#" class="btn btn-primary">Lire...</a>
+                                                    <a href="<?= site_url('blog/view/'.$list_article[$j]['id']); ?>" class="btn btn-primary" style="position: absolute; bottom: 20px;">Continuer la lecture</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -3,7 +3,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Accueil extends CI_Controller {
-    
+
     public function index(){
         $data = ['page'=>'accueil'];
         $data['titre_page'] = "ATM";
@@ -16,6 +16,5 @@ class Accueil extends CI_Controller {
 		$this->load->model('chargement_data_model');
 	    return $this->chargement_data_model->get_list_actualite_recents();
     }
-    
-}
 
+}

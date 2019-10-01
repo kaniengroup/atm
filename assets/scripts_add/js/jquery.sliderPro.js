@@ -4822,7 +4822,8 @@
 
 			// Disable click events on links
 			$( event.target ).parents( '.sp-thumbnail-container' ).find( 'a' ).one( 'click.' + NS, function( event ) {
-				event.preventDefault();
+				// Désactiver le preventDefault sur le lien
+				// event.preventDefault();
 			});
 
 			// Get the initial position of the mouse pointer and the initial position

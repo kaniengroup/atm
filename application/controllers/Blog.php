@@ -36,10 +36,32 @@ class Blog extends CI_Controller
         $this->load->view('pages/main_layout',$data);
     }
 
+    public function view($idblog=0)
+    {
+        if (!isset($idblog) || intval($idblog)==0) {
+            redirect('blog');
+        } else {
+            $idblog = intval($idblog);
+            // Récupération des détails de l'article
+            $data['details_blog'] = $this->get_details_blog($idblog);
+        }
+
+        $data['titre_page'] = "ATM";
+        $data['page']='details_blog';
+        $this->load->view('pages/main_layout',$data);
+    }
+
     // Fonctions liste publication
     private function get_list_blog()
     {
         $this->load->model('chargement_data_model');
-        return $this->chargement_data_model->get_list_blog();
+        return $this->chargement_data_model->get_list_blog_a_jour();
+    }
+
+    // Récupération des détails d'un blog
+    private function get_details_blog($idblog)
+    {
+        $this->load->model('chargement_data_model');
+        return $this->chargement_data_model->get_details_blog($idblog);
     }
 }

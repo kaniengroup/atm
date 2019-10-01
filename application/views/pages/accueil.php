@@ -123,8 +123,14 @@
                                             foreach ($list_articles_recents as $article):
                                         ?>  
                                             <div class="sp-thumbnail">
-                                                <div class="sp-thumbnail-title"><?= $article['titre']; ?></div>
-                                                <div class="sp-thumbnail-description"><?= substr($article['contenu'],0,25).' ...'; ?></div>
+                                                <div class="sp-thumbnail-title">
+                                                    <?= $article['titre']; ?>
+                                                </div>
+                                                <div class="sp-thumbnail-description">
+                                                    <?= substr($article['contenu'],0,20).' ...'; ?>
+                                                    <br>
+                                                    <a href="<?= site_url('actualites/view/'.$article['id']); ?>">Continuer la lecture</a>    
+                                                </div>
                                             </div>
                                         <?php
                                             endforeach;

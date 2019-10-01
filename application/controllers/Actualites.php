@@ -5,6 +5,7 @@ class Actualites extends CI_Controller
 {
     public function index()
     {
+ 
         $rep_actualite = $this->get_list_actualite();     
         $data['list_article'] = $rep_actualite['list_actualites'];
         $data['nbre_article_total'] = $rep_actualite['nbre_actualite'];
@@ -33,12 +34,34 @@ class Actualites extends CI_Controller
         $data['page']='actualites';
         $this->load->view('pages/main_layout',$data);
     }
+
+    public function view($idactualite=0)
+    {
+        if (!isset($idactualite) || intval($idactualite)==0) {
+            redirect('actualites');
+        } else {
+            $idactualite = intval($idactualite);
+            // Récupération des détails de l'article
+            $data['details_actualite'] = $this->get_details_actualite($idactualite);
+        }
+
+        $data['titre_page'] = "ATM";
+        $data['page']='details_actualite';
+        $this->load->view('pages/main_layout',$data);
+    }
     
     // Fonctions liste publication
 	private function get_list_actualite()
 	{
 		$this->load->model('chargement_data_model');
-	    return $this->chargement_data_model->get_list_actualite();
+	    return $this->chargement_data_model->get_list_actualite_a_jour();
+    }
+
+    // Récupération des détails d'un article
+    private function get_details_actualite($idactualite)
+    {
+        $this->load->model('chargement_data_model');
+        return $this->chargement_data_model->get_details_actualite($idactualite);
     }
     
 

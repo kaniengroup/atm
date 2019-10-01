@@ -29,7 +29,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="<?= site_url('dashboard'); ?>">-Admin</a>
+      <a class="navbar-brand mr-1" href="<?= site_url('dashboard'); ?>">ATM-Admin</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -72,6 +72,12 @@
           <a class="nav-link" href="<?= site_url('dashboard','gestion_blog'); ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Gestion Blog</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="<?= site_url('dashboard','gestion_internaute'); ?>">
+            <i class="fas fa-fw fa-user-alt"></i>
+            <span>Internautes</span>
           </a>
         </li>
         <li class="nav-item dropdown">

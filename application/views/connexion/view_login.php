@@ -40,7 +40,7 @@
       
 
       <div class="card card-login mx-auto mt-3">
-        <div class="card-header">-Login</div>
+        <div class="card-header">ATM-Admin</div>
         <div class="card-body">
           <form role="form" enctype="multipart/form-data" action="<?= site_url('connexion'); ?>" method="post">
             <div class="form-group">

@@ -356,6 +356,32 @@ class Dashboard extends CI_Controller {
     	$this->load->view('layouts/view_main',$data,false);
 	}
 
+	public function gestion_internaute()
+	{
+
+		$this->si_loguer();
+
+		$data['titre_page'] = 'ATM';
+		$data['titre'] = "Gestion internaute";
+		$data['page'] = "pages/view_gestion_internaute";
+		$data['js_page'] = "gestion_internaute";
+
+		$this->load->model('chargement_data_model');
+		$infos_user = $this->get_data_user();
+		$data['list_statut'] = $this->get_list_statut();
+		$data['list_internaute'] = $this->get_list_internaute();
+
+		$data['login_user'] = "";
+		$data['nomComplet'] = "";
+
+	    foreach ($infos_user as $rep_user) :
+	        $data['login_user'] = $rep_user['login'];
+	        $data['nomComplet'] = $rep_user['nomComplet'];
+	    endforeach;
+
+    	$this->load->view('layouts/view_main',$data,false);
+	}
+
 	// Fonctions ajouter article
 	private function add_article($data)
 	{
@@ -414,6 +440,12 @@ class Dashboard extends CI_Controller {
 	private function get_list_user()
 	{
 	    return $this->chargement_data_model->get_list_user();
+	}
+
+	// Fonctions liste internaute
+	private function get_list_internaute()
+	{
+	    return $this->chargement_data_model->get_list_internaute();
 	}
 
 	// Fonctions liste article

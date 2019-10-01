@@ -37,6 +37,6 @@ class Agenda extends CI_Controller
     private function get_list_actualite()
 	{
 		$this->load->model('chargement_data_model');
-	    return $this->chargement_data_model->get_list_actualite();
+	    return $this->chargement_data_model->get_list_actualite_a_jour();
     }
 }

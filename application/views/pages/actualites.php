@@ -38,26 +38,20 @@
                                         }
                                         for ($j=$valeur_initiale; $j <= $valeur_finale; $j++) {
                                         ?>
-                                            <div class="card m-3">
-                                                <div class="row no-gutters">
-                                                    <div class="col-md-4">
-                                                        <img src="<?= base_url('assets/img/sliders/slide1.jpg'); ?>" class="card-img" height="259px" width="225px" alt="...">
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title"><?= $list_article[$j]['titre']; ?></h5>
-                                                            <p class="card-text"><?= $list_article[$j]['contenu']; ?>
-                                                            </p>
-                                                            <span>
-                                                                <span class="card-text"><small class="text-muted"><span class="text-primary">Publié le : </span><?= date("d-m-Y",strtotime($list_article[$j]['date_pub'])); ?></small></span>
-                                                                <button type="button" class="btn btn-primary btn-sm ">Lire...</button>
-                                                                <button type="button" class="btn btn-primary btn-sm ">Partager</button>
-                                                            </span>
-                                                            
-                                                        </div>
-                                                    </div>
+                                            <div class="col-md-12">
+                                              <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                                                <img class="card-img-left flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 300px; height: 250px;" src="<?= base_url('assets/img/sliders/slide1.jpg'); ?>" data-holder-rendered="true">
+                                                <div class="card-body d-flex flex-column align-items-start">
+                                                  <strong class="d-inline-block mb-2 text-primary">Actualité</strong>
+                                                  <h3 class="mb-0">
+                                                    <a class="text-dark" href="#"><?= $list_article[$j]['titre']; ?></a>
+                                                  </h3>
+                                                  <div class="mb-1 text-muted"><?= date("d/m/Y",strtotime($list_article[$j]['date_pub'])); ?></div>
+                                                  <p class="card-text mb-auto"><?= $list_article[$j]['contenu']; ?></p>
+                                                  <a href="<?= site_url('actualites/view/'.$list_article[$j]['id']); ?>">Continuer la lecture</a>
                                                 </div>
-                                            </div> 
+                                              </div>
+                                            </div>
                                         <?php   
                                         }
                                         ?>

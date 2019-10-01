@@ -24,7 +24,7 @@ class Dashboard extends CI_Controller {
 
 		$this->si_loguer();
 
-		$data['titre_page'] = '';
+		$data['titre_page'] = 'ATM';
 		$data['titre'] = "Tableau de bord";
 		$data['page'] = "pages/view_index";
 
@@ -34,6 +34,13 @@ class Dashboard extends CI_Controller {
 
 		$this->load->model('chargement_data_model');
 		$infos_user = $this->get_data_user();
+		$infos_stats = $this->get_data_stats();
+		$data['nbre_article'] = $infos_stats['nbre_article'];
+		$data['nbre_article_ligne'] = $infos_stats['nbre_article_ligne'];
+		$data['nbre_blog'] = $infos_stats['nbre_blog'];
+		$data['nbre_blog_ligne'] = $infos_stats['nbre_blog_ligne'];
+		$data['nbre_internaute'] = $infos_stats['nbre_internaute'];
+		$data['nbre_user'] = $infos_stats['nbre_user'];
 
 		$data['login_user'] = "";
 		$data['nomComplet'] = "";
@@ -437,6 +444,12 @@ class Dashboard extends CI_Controller {
 
 
 	/************************* Données communes *******************************/
+	// Fonction get data user en cours
+	private function get_data_stats()
+	{
+	    return $this->chargement_data_model->get_data_stats();
+	}
+
 	// Fonction get data user en cours
 	private function get_data_user()
 	{

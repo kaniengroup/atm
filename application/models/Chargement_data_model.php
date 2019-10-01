@@ -143,5 +143,39 @@ class Chargement_data_model extends CI_Model
 	// Fin infos pub
 
 
+	// Début Donnes stats
+	public function get_data_stats()
+	{
+		// Chargement du solde
+		$query = $this->db->query("select * from article order by date_pub ASC");
+		$infos['nbre_actualite'] = $query->num_rows();
+
+		$query = $this->db->query("select * from article order by date_pub ASC");
+		$infos['nbre_actualite'] = $query->num_rows();
+
+		$query = $this->db->query("select * from article order by date_pub ASC");
+		$infos['nbre_actualite'] = $query->num_rows();
+
+		$query = $this->db->query("select * from article order by date_pub ASC");
+		$infos['nbre_actualite'] = $query->num_rows();
+
+		$query = $this->db->query("select * from article order by date_pub ASC");
+		$infos['nbre_actualite'] = $query->num_rows();
+
+		$query = $this->db->query("select * from article order by date_pub ASC");
+		$infos['nbre_actualite'] = $query->num_rows();
+
+		$query = $this->db->query("select * from article order by date_pub ASC");
+		$infos['nbre_actualite'] = $query->num_rows();
+		// Chargement du solde
+
+		$query->free_result();
+
+		return $infos;
+
+	}
+	// Fin Donnes stats
+
+
 
 }

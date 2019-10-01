@@ -68,6 +68,24 @@ create table if not exists `blog` (
   foreign key(user) references user(login)  on delete cascade
 ) Engine=Innodb DEFAULT CHARSET=utf8;
 
+create table if not exists `internaute` (
+  id int unsigned not null unique auto_increment,
+  pseudo varchar(100) not null,
+  email varchar(50) not null,
+  mdp varchar(100) not null,
+  date_creation date not null,
+  primary key (`id`)
+) Engine=Innodb DEFAULT CHARSET=utf8;
+
+create table if not exists `commentaire` (
+  id int unsigned not null unique auto_increment,
+  idinternaute int unsigned not null,
+  idblog int not null,
+  message TEXT not null,
+  date_post date not null,
+  primary key (`id`)
+) Engine=Innodb DEFAULT CHARSET=utf8;
+
 insert into genere_login(nombre1,nombre2,date_modif) values("00","99","9999-12-31");
 
 -- Insertion etat

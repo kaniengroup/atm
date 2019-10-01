@@ -175,7 +175,7 @@
                     <div class="row ">
                         <div class="col-md-6 text-justify">
                             <h4 class="text-center tw-color">Photos</h4>
-                            <div id="example3" class="slider-pro">
+                            <!-- <div id="example3" class="slider-pro">
                                 <div class="sp-slides">
                                     <div class="sp-slide">
                                         <img class="sp-image" src="../src/css/images/blank.gif" 
@@ -327,7 +327,8 @@
                                     <img class="sp-thumbnail" src="http://bqworks.com/slider-pro/images/image9_medium.jpg"/>
                                     <img class="sp-thumbnail" src="http://bqworks.com/slider-pro/images/image10_medium.jpg"/>
                                 </div>
-                            </div>  
+                            </div>   -->
+                            <iframe style="position: relative; top: 0; left: 0; width: 100%; height: 100%;" src="https://flickrembed.com/cms_embed.php?source=flickr&layout=responsive&input=www.flickr.com/photos/184731917@N05/&sort=0&by=user&theme=default&scale=fill&speed=3000&limit=10&skin=default&autoplay=true" scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"><p><a rel="nofollow" href="https://www.onecompare.com/apple/iphone-xr-deals">Onecompare</a></p><small>Powered by <a href="https://flickrembed.com">flickr embed</a>.</small></iframe><script type="text/javascript">function showpics(){var a=$("#box").val();$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags="+a+"&tagmode=any&format=json&jsoncallback=?",function(a){$("#images").hide().html(a).fadeIn("fast"),$.each(a.items,function(a,e){$("<img/>").attr("src",e.media.m).appendTo("#images")})})}</script>cd
                         </div>
                         <div class="col-md-6 text-justify">
                             <h4 class="text-center tw-color">Vidéos</h4>

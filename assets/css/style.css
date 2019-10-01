@@ -1,10 +1,6 @@
-/*.link_img{
-    cursor: pointer;
-}*/
-.title_article_one{
-
+span.ok{
+    font-size: 100px !important;
 }
-
 .text_one_actu{
    text-align: center;
     margin-top: 25%;
@@ -82,16 +78,6 @@ ul.menu_principal li a:hover{
     color: #ff7d1f;
 }
 
-h2.actuality{
-    /*display: inline-block;*/
-    /*margin-bottom: -60px;*/
-    /*z-index: 1;*/
-
-}
-
-.menu_principal {
-
-}
 
 .carousel-indicators .active {
 
@@ -242,40 +228,15 @@ header  .admin_bg{
 
 }
 
-
 @media screen and (max-width: 983px) {
-    .fb-color{
-        /*display: block;
-         margin-left: 75px;*/
-
-    }
-
-    .tw{
-        /*display: block;
-        margin-left: 75px;*/
-    }
     .follow{
 
         background: url("../img/rect_follow_me.png") no-repeat;
         background-size: 200px 300px;
     }
-
-    .follow_me{
-
-    }
-
-    .container_header{
-
-    }
-
     .logo_officiel_ATM{
         width: 22%;
-        /*display: none;*/
-        /*width:15%;*/
-        /*height:120%;*/
         z-index: 10;
-        /*width: 125px;*/
-        /*height: 100px;*/
         position: absolute;
         margin-top: 10px;
     }
@@ -339,21 +300,6 @@ header  .admin_bg{
 
 }
 
-/*@media screen and (max-width: 766px) {
-    ul.menu_principal li  {
-
-
-
-    }
-    ul.menu_principal li a {
-
-        /!*text-align: center;*!/
-
-    }
-    .logo_officiel_ATM{
-        display: none;
-    }
-}*/
 @media screen and (max-width: 767px){
     .follow{
         background: url("../img/rect_follow_me.png") no-repeat;
@@ -362,18 +308,6 @@ header  .admin_bg{
         background-size: 105% 100%;
 
     }
-    ul.menu_principal li  {
-
-        /*padding: 2px;
-        font-size: 10px;
-        text-align: center;*/
-    }
-    ul.menu_principal li a {
-
-        /*text-align: center;*/
-
-    }
-
     .menu_principal{
         font-size: 6px !important;
     }
@@ -506,13 +440,6 @@ header  .admin_bg{
 
 
 }
-
-
-
-
-
-
-
 
 @media (min-width: 304px) {
     .navbar-expand-lg .navbar-nav .menu_p {

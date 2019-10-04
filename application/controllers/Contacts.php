@@ -8,7 +8,10 @@ class Contacts extends CI_Controller
     {
 
     	$data['titre_page'] = "ATM";
+    	$data['js_page'] = "contact_form";
         $data['page']='contacts';
         $this->load->view('pages/main_layout',$data);
     }
+
+    
 }

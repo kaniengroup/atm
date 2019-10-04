@@ -104,7 +104,6 @@ if (isset($reponse) && $reponse=="true") {
                 </div>
 
                 <div class="row justify-content-around">
-
                   <div class="col-6">
 
                     <div class="form-group">
@@ -115,7 +114,6 @@ if (isset($reponse) && $reponse=="true") {
                     <div class="form-group">
                         <label for="contenu_i" class="col-form-label col-form-label-sm">Contenu</label>
                         <div class="pb-article" id="contenu_i"></div>
-                        <!-- <textarea class="form-control form-control-sm" ></textarea> -->
                     </div>
 
                     <div class="form-group">

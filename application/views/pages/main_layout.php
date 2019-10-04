@@ -135,10 +135,13 @@
             </div>
             <div class="col-md-4 bg_article_liste  p-3">
                 <span class="tw-color text-center" id="exampleemail">Abonnez-vous à la Newsletter</span>
-                <form>
+                <form id="newsletter">
                 <div class="form-group border-primary p-3">
-                    <input type="email" class="form-control text-blue" id="exampleemail" placeholder="Entrez votre e-mail "><br/>
-                    <button type="submit" class="btn btn-primary">Abonnez</button>
+                    <input type="text" class="form-control" id="newsletter" name="newsletter" data-required="true" data-describedby="newsletterHelp" data-description="newsletter" aria-describedby="newsletterHelp">
+                    <small id="newsletterHelp" class="text-muted"></small>
+                    <button type="submit" class="btn btn-primary mt-3">Abonnez</button>
+                    
+
                 </div> 
                 </form>
             </div>
@@ -196,7 +199,15 @@
     <script src="<?php echo  base_url('assets/js/bootstrap.min.js'); ?>"></script>
     <script src="<?php echo  base_url('assets/js/pagination.min.js'); ?>"></script>
     <!-- App functions and actions -->
-    <script src="<?php echo  base_url('assets/js/app.min.js'); ?>"></script>
+    <script src="<?= js_url('assets/js/validate.form/','jquery-validate.min'); ?>"></script>
+    <?php if (isset($js_page) && $js_page != "") {
+        ?>
+        <script src="<?php echo  base_url('assets/js/js.views/'.$js_page.'.js'); ?>"></script>
+        <?php
+    } ?>
+     
+    <!-- Fin JS contact -->
+
 
     <script type="text/javascript">
     $(function() {
@@ -281,6 +292,11 @@
         });
 </script>
     <!-- Fin JS Vidéos -->
+
+<!-- Début JS contact -->
+<!-- <script type="text/javascript">
+    $(#titre_mHelp).hide();
+</script> -->
 
     <!-- Début JS calender -->
     <script src="<?php echo  base_url('assets/calendar/calendar.js'); ?>"></script>

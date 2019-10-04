@@ -15,35 +15,53 @@
             <div class="d-flex align-items-center justify-content-center h-100">
                 <div class="d-flex flex-column col-12">
                         <div class="">
-                            <div class="col-md-6 offset-md-3  text-justify justify-content-center">
+                            <div class="col-md-8 offset-md-2  text-justify justify-content-center">
                                 <div class="card border-primary p-3">
-                                    <img src="..." class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center">Contactez-Moi</h5>
-                                            <form>
-                                                <div class="form-group">
-                                                    <label for="exampleInputPassword1 text-primary">Nom</label>
-                                                    <input type="text" class="form-control" id="nom" >
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputPassword1">Prenoms</label>
-                                                    <input type="text" class="form-control" id="prenoms">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputPassword1">Email</label>
-                                                    <input type="text" class="form-control" id="email">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputPassword1 text-primary">Objet</label>
-                                                    <input type="text" class="form-control" id="objet" >
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlTextarea1">Message</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                </div>
-                                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                                            <form id="contact_form">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="nom" class="">Nom</label>
+                                                            <input type="text" class="form-control" id="nom" name="nom" data-required="true" data-describedby="nomHelp" data-description="nom" aria-describedby="nomHelp">
+                                                            <small id="nomHelp" class="text-muted"></small>
+                                                        </div>  
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="prenoms" class="">Prénoms</label>
+                                                            <input type="text" class="form-control" id="prenoms" name="prenoms" data-required="true" data-describedby="prenomsHelp" data-description="prenoms" aria-describedby="prenomsHelp">
+                                                            <small id="prenomsHelp" class="text-muted"></small>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="email" class="">Email</label>
+                                                            <input type="email" class="form-control" id="email" name="email" data-required="true" data-describedby="emailHelp" data-description="email" aria-describedby="emailHelp">
+                                                            <small id="emailHelp" class="text-muted"></small>
+                                                        </div>  
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="objet" class="">Objet</label>
+                                                            <input type="text" class="form-control" id="objet" name="objet" data-required="true" data-describedby="objetHelp" data-description="objet" aria-describedby="objetHelp">
+                                                            <small id="objetHelp" class="text-muted"></small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="message" class="">Message</label>
+                                                            <textarea class="form-control" id="message" name="message" data-required="true" data-describedby="messageHelp" data-description="message" aria-describedby="messageHelp"  rows="3"></textarea>
+                                                            <small id="messageHelp" class="text-muted"></small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                            <button type="submit" id="envoyer" class="btn text-white fb-color">Envoyer</button>
                                             </form>
-                                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                            </div>
                                     </div>
                                 </div>   
                             </div>

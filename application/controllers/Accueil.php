@@ -7,6 +7,7 @@ class Accueil extends CI_Controller {
     public function index(){
         $data = ['page'=>'accueil'];
         $data['titre_page'] = "ATM";
+        $data['js_page'] = "newsletter";
         $data['list_articles_recents'] = $this->get_list_actualite_recents();
         $this->load->view('pages/main_layout',$data);
     }

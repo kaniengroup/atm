@@ -44,9 +44,14 @@
                                                 <div class="card-body" style="height: 250px;">
                                                     <h5 class="card-title"><?= $list_article[$j]['titre']; ?></h5>
                                                     <p class="card-text">
-                                                        <?= substr($list_article[$j]['contenu'],0,255).' ...'; ?>
+                                                        <?php
+                                                        if (strlen($list_article[$j]['contenu'])>250)
+                                                            echo substr($list_article[$j]['contenu'],0,250).' ...';
+                                                        else
+                                                            echo $list_article[$j]['contenu'];
+                                                        ?>
                                                     </p>
-                                                    <a href="<?= site_url('blog/view/'.$list_article[$j]['id']); ?>" class="btn btn-primary" style="position: absolute; bottom: 20px;">Continuer la lecture</a>
+                                                    <a href="<?= site_url('blog/view/'.$list_article[$j]['id']); ?>" class="btn btn-primary btn-sm" style="position: absolute; bottom: 20px;">Continuer la lecture</a>
                                                 </div>
                                             </div>
                                         </div>

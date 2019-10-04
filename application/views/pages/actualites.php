@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row">  
         <img class="img-fluid" src="<?php echo base_url('assets/img/sliders/slide1.jpg'); ?>" alt="First slide">           
@@ -42,12 +43,28 @@
                                               <div class="card flex-md-row mb-4 box-shadow h-md-250">
                                                 <img class="card-img-left flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" style="width: 300px; height: 250px;" src="<?= base_url('assets/img/sliders/slide1.jpg'); ?>" data-holder-rendered="true">
                                                 <div class="card-body d-flex flex-column align-items-start">
-                                                  <strong class="d-inline-block mb-2 text-primary">Actualité</strong>
+                                                  <strong class="d-inline-block mb-2 text-primary">
+                                                    <?= $list_article[$j]['categorie']; ?>
+                                                   </strong>
                                                   <h3 class="mb-0">
                                                     <a class="text-dark" href="#"><?= $list_article[$j]['titre']; ?></a>
                                                   </h3>
-                                                  <div class="mb-1 text-muted"><?= date("d/m/Y",strtotime($list_article[$j]['date_pub'])); ?></div>
-                                                  <p class="card-text mb-auto"><?= $list_article[$j]['contenu']; ?></p>
+                                                  <div class="mb-1 text-muted">
+                                                    <?php 
+                                                    if ($list_article[$j]['etat']=="Publier") 
+                                                        echo date("d/m/Y",strtotime($list_article[$j]['date_pub'])); 
+                                                    else if ($list_article[$j]['etat']=="Publier sur une période") 
+                                                        echo date("d/m/Y",strtotime($list_article[$j]['periode_pub_debut'])); 
+                                                    ?>    
+                                                  </div>
+                                                  <p class="card-text mb-auto">
+                                                        <?php
+                                                        if (strlen($list_article[$j]['contenu'])>250)
+                                                            echo substr($list_article[$j]['contenu'],0,250).' ...';
+                                                        else
+                                                            echo $list_article[$j]['contenu'];
+                                                        ?>
+                                                  </p>
                                                   <a href="<?= site_url('actualites/view/'.$list_article[$j]['id']); ?>">Continuer la lecture</a>
                                                 </div>
                                               </div>

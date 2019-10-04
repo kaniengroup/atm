@@ -147,6 +147,7 @@ class Dashboard extends CI_Controller {
 					'titre' => $this->input->post('titre'),
 					'contenu' => $this->input->post('contenu'),
 					'etat' => $this->input->post('etat_article'),
+					'idcategorie' => $this->input->post('categorie_article'),
 					'date_pub' => $this->input->post('date_pub'),
 					'periode_pub_debut' => $this->input->post('periode_debut'),
 					'periode_pub_fin' => $this->input->post('periode_fin'),
@@ -170,6 +171,7 @@ class Dashboard extends CI_Controller {
 					'titre' => $this->input->post('titre_m'),
 					'contenu' => $this->input->post('contenu_m'),
 					'etat' => $this->input->post('etat_article_m'),
+					'idcategorie' => $this->input->post('categorie_article_m'),
 					'date_pub' => $this->input->post('date_pub_m'),
 					'periode_pub_debut' => $this->input->post('periode_debut_m'),
 					'periode_pub_fin' => $this->input->post('periode_fin_m')
@@ -191,6 +193,7 @@ class Dashboard extends CI_Controller {
 		$this->load->model('chargement_data_model');
 		$infos_user = $this->get_data_user();
 		$data['list_etat'] = $this->get_list_etat();
+		$data['list_categorie'] = $this->get_list_categorie();
 		$data_actualite = $this->get_list_article();
 		$data['list_article'] = $data_actualite['list_actualites'];
 		$data['date_jour'] = $this->date_jour();
@@ -272,6 +275,7 @@ class Dashboard extends CI_Controller {
 		$this->load->model('chargement_data_model');
 		$infos_user = $this->get_data_user();
 		$data['list_etat'] = $this->get_list_etat();
+		$data['list_categorie'] = $this->get_list_categorie();
 		$data_blog = $this->get_list_blog();
 		$data['list_blog'] = $data_blog['list_blog'];
 		$data['date_jour'] = $this->date_jour();
@@ -470,6 +474,12 @@ class Dashboard extends CI_Controller {
 	private function get_list_etat()
 	{
 	    return $this->chargement_data_model->get_list_etat();
+	}
+
+	// Fonctions liste etat
+	private function get_list_categorie()
+	{
+	    return $this->chargement_data_model->get_list_categorie();
 	}
 	/************************* user add cea *******************************/
 

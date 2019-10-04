@@ -38,6 +38,7 @@ class Blog extends CI_Controller
 
     public function view($idblog=0)
     {
+
         if (!isset($idblog) || intval($idblog)==0) {
             redirect('blog');
         } else {
@@ -46,8 +47,80 @@ class Blog extends CI_Controller
             $data['details_blog'] = $this->get_details_blog($idblog);
         }
 
+        if ($this->input->post('btn_login')) {
+
+            $data1 = array(
+                'email' => $this->input->post('cx_email'),
+                'pwd'=>$this->input->post('cx_pwd')
+            );
+
+            $result = $this->login_internaute($data1);
+
+            $reponse = $result['reponse'];
+            $pseudo = $result['pseudo'];
+            $email = $result['email'];
+
+            if ($reponse=="true") {
+                $data = array('userPseudo'=>$pseudo, 'userEmail'=>$email, 'logged'=>true);
+                $this->session->set_userdata($data);
+
+                redirect("blog/view/$idblog");
+            } else {
+
+                redirect("blog/login/$idblog?req=$reponse");
+            }
+
+        }
+
         $data['titre_page'] = "ATM";
         $data['page']='details_blog';
+        $this->load->view('pages/main_layout',$data);
+    }
+
+    public function create($idblog=0)
+    {
+        if (!isset($idblog) || intval($idblog)==0) {
+            redirect('blog');
+        } else {
+            $data['idblog'] = intval($idblog);
+        }
+
+        if ($this->input->post('envoyer')) {
+            $data1 = array(
+                'pseudo' => $this->input->post('pseudo'),
+                'email'=>$this->input->post('email'),
+                'pwd'=>$this->input->post('pwd'),
+                'idblog'=>$this->input->post('idblog')
+            );
+            $result = $this->ajouter_internaute($data1);
+            redirect("blog/create/$idblog?req=".$result);
+        }
+
+        if ($this->input->get('req')) {
+            $data['reponse'] = $this->input->get('req');
+        }
+
+        $data['titre_page'] = "ATM";
+        $data['page']='inscription_atm';
+        $data['js_page']='inscription_internaute';
+        $this->load->view('pages/main_layout',$data);
+    }
+
+    public function login($idblog=0)
+    {
+        if (!isset($idblog) || intval($idblog)==0) {
+            redirect('blog');
+        } else {
+            $data['idblog'] = intval($idblog);
+        }
+
+        if ($this->input->get('req')) {
+            $data['reponse'] = $this->input->get('req');
+        }
+
+        $data['titre_page'] = "ATM";
+        $data['page']='login_atm';
+        $data['js_page']='inscription_internaute';
         $this->load->view('pages/main_layout',$data);
     }
 
@@ -63,5 +136,28 @@ class Blog extends CI_Controller
     {
         $this->load->model('chargement_data_model');
         return $this->chargement_data_model->get_details_blog($idblog);
+    }
+
+    // Début Gestion des annonces
+    private function ajouter_internaute($data){
+        $this->load->model('gestion_internaute_model');
+        return $this->gestion_internaute_model->ajouter_internaute($data);
+    }
+
+     // Début Gestion des annonces
+    private function login_internaute($data){
+        $this->load->model('gestion_internaute_model');
+        return $this->gestion_internaute_model->login_internaute($data);
+    }
+
+
+    // Fonction de deconnexion
+    public function deconnexion()
+    {
+        $this->session->unset_userdata('userEmail');
+        $this->session->unset_userdata('userPseudo');
+        $this->session->unset_userdata('logged');
+        $this->session->sess_destroy();
+        redirect(site_url('accueil'));
     }
 }

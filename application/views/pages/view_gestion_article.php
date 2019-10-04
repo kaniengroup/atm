@@ -43,7 +43,7 @@ if (isset($reponse) && $reponse=="true") {
                         <th>Contenu</th>
                         <th>Date de création</th>
                         <th>Etat</th>
-                        <th>Utilisateur</th>
+                        <th>Catégorie</th>
                         <th style="background-color:#ff7d1f;color:white">Modification</th>
                       </tr>
                     </thead>
@@ -58,7 +58,7 @@ if (isset($reponse) && $reponse=="true") {
                           <td>
                               <span class="text-center <?php if($pub['etat']=='Publier') echo 'badge badge-success'; else if($pub['etat']=='Ne pas publier') echo 'badge badge-warning'; else if($pub['etat']=='Publier sur une période') echo 'badge badge-info'; ?>"><?= $pub['etat']; ?></span>
                           </td>
-                          <td><?= $pub['user']; ?></td>
+                          <td><?= $pub['categorie']; ?></td>
                           <td>
                             <div class="d-flex justify-content-center">
                               <a onclick="get_pub_info(<?= $pub['id']; ?>); return false;" href="#" class="text-primary" data-toggle="modal" data-target="#modal_pub_info" title="Info"><i class="fa fa-info-circle fa-1x"></i></a>
@@ -129,6 +129,11 @@ if (isset($reponse) && $reponse=="true") {
                   </div>
 
                   <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="categorie_article_i" class="col-form-label col-form-label-sm">Catégorie</label>
+                        <input class="form-control form-control-sm" type="text" id="categorie_article_i" readonly>
+                    </div>
 
                     <div class="form-group">
                         <label for="etat_article_i" class="col-form-label col-form-label-sm">Etat</label>
@@ -212,6 +217,21 @@ if (isset($reponse) && $reponse=="true") {
                   </div>
 
                   <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="categorie_article_m" class="col-form-label col-form-label-sm">Catégorie</label>
+                        <select data-required="true" data-describedby="categorie_article_mHelp" data-description="categorie_article_m" class="form-control form-control-sm" name="categorie_article_m" id="categorie_article_m" aria-describedby="categorie_article_mHelp">
+                            <option value="" selected="selected">Choisissez un etat</option>
+                            <?php
+                            foreach ($list_categorie as $categorie) :
+                            ?>
+                            <option value="<?= $categorie['id']; ?>"><?= $categorie['libelle']; ?></option>
+                            <?php
+                            endforeach;
+                            ?>
+                        </select>
+                        <small id="categorie_article_mHelp" class="form-text text-muted">Veuillez saissir la nouvelle  valeur dans le champ.</small>
+                    </div>
 
                     <div class="form-group">
                         <label for="etat_article_m" class="col-form-label col-form-label-sm">Etat</label>
@@ -310,7 +330,22 @@ if (isset($reponse) && $reponse=="true") {
 
                   <div class="col-6">
 
-                    <div class="form-group">
+                      <div class="form-group">
+                          <label for="categorie_article" class="col-form-label col-form-label-sm">Catégorie</label>
+                          <select data-required="true" data-describedby="categorie_articleHelp" data-description="categorie_article" class="form-control form-control-sm" name="categorie_article" id="categorie_article" aria-describedby="categorie_articleHelp">
+                              <option value="" selected="selected">Choisissez une catégorie</option>
+                              <?php
+                              foreach ($list_categorie as $categorie) :
+                                  ?>
+                                  <option value="<?= $categorie['id']; ?>"><?= $categorie['libelle']; ?></option>
+                                  <?php
+                              endforeach;
+                              ?>
+                          </select>
+                          <small id="categorie_articleHelp" class="form-text text-muted">Veuillez saissir la nouvelle  valeur dans le champ.</small>
+                      </div>
+
+                      <div class="form-group">
                           <label for="etat_article" class="col-form-label col-form-label-sm">Etat</label>
                           <select data-required="true" data-describedby="etat_articleHelp" data-description="etat_article" class="form-control form-control-sm" name="etat_article" id="etat_article" aria-describedby="etat_articleHelp">
                               <option value="" selected="selected">Choisissez un etat</option>

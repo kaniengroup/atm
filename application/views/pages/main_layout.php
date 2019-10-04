@@ -209,6 +209,14 @@
     <!-- Fin JS contact -->
 
 
+    <!-- Script validation -->
+    <script src="<?php echo  base_url('assets/js/validate.form/jquery-validate.min.js'); ?>"></script>
+
+    <!-- Script page en cours -->
+    <?php if (isset($js_page) && $js_page!=""): ?>
+    <script src="<?= js_url('assets/js/js.views/',$js_page); ?>"></script>
+    <?php endif ?>
+
     <script type="text/javascript">
     $(function() {
         $('.view_page').hide(); // Cacher toute les pages

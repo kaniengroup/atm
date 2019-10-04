@@ -9,6 +9,7 @@ class Gestion_article_model extends CI_Model
         $titre = $data['titre'];
         $contenu = $data['contenu'];
         $etat = $data['etat'];
+        $idcategorie = $data['idcategorie'];
         $date_pub = $data['date_pub'];
         $periode_pub_debut = $data['periode_pub_debut'];
         $periode_pub_fin = $data['periode_pub_fin'];
@@ -17,12 +18,22 @@ class Gestion_article_model extends CI_Model
         $datestring = "%Y-%m-%d";
         $time = time();
         $date_creation = mdate($datestring, $time);
+
         $lien_img = "";
+
+        if (!is_int($idcategorie)) {
+            $idcategorie = intval($idcategorie);
+        }
+
 
         $titre = htmlspecialchars($titre);
         $contenu = htmlspecialchars($contenu);
         $etat = htmlspecialchars($etat);
         $user = htmlspecialchars($user);
+
+        $date_pub = date("Y-m-d",strtotime($date_pub));
+        $periode_pub_debut = date("Y-m-d",strtotime($periode_pub_debut));
+        $periode_pub_fin = date("Y-m-d",strtotime($periode_pub_fin));
 
         if ($etat_article=="Publier") {
             $periode_pub_debut = "";
@@ -37,7 +48,7 @@ class Gestion_article_model extends CI_Model
         
         $reponse['reponse'] = "false";
 
-        $query = 'insert into article(titre,contenu,date_creation,date_pub,periode_pub_debut,periode_pub_fin,lien_img,etat,user) values("'.$titre.'","'.$contenu.'","'.$date_creation.'","'.$date_pub.'","'.$periode_pub_debut.'","'.$periode_pub_fin.'","'.$lien_img.'","'.$etat.'","'.$user.'")';
+        $query = 'insert into article(titre,contenu,date_creation,date_pub,periode_pub_debut,periode_pub_fin,lien_img,etat,user,idcategorie) values("'.$titre.'","'.$contenu.'","'.$date_creation.'","'.$date_pub.'","'.$periode_pub_debut.'","'.$periode_pub_fin.'","'.$lien_img.'","'.$etat.'","'.$user.'",'.$idcategorie.')';
         $req = $this->db->simple_query($query); 
         
         if ($req) {
@@ -54,6 +65,7 @@ class Gestion_article_model extends CI_Model
         $titre = $data['titre'];
         $contenu = $data['contenu'];
         $etat = $data['etat'];
+        $idcategorie = $data['idcategorie'];
         $date_pub = $data['date_pub'];
         $periode_pub_debut = $data['periode_pub_debut'];
         $periode_pub_fin = $data['periode_pub_fin'];
@@ -64,9 +76,17 @@ class Gestion_article_model extends CI_Model
             $pub_id = intval($pub_id);
         }
 
+        if (!is_int($idcategorie)) {
+            $idcategorie = intval($idcategorie);
+        }
+
         $titre = htmlspecialchars($titre);
         $contenu = htmlspecialchars($contenu);
         $etat = htmlspecialchars($etat);
+
+        $date_pub = date("Y-m-d",strtotime($date_pub));
+        $periode_pub_debut = date("Y-m-d",strtotime($periode_pub_debut));
+        $periode_pub_fin = date("Y-m-d",strtotime($periode_pub_fin));
 
         if ($etat=="Publier") {
             $periode_pub_debut = "";
@@ -82,7 +102,7 @@ class Gestion_article_model extends CI_Model
         $reponse['reponse'] = "false";
 
         if ($pub_id!=0) {
-            $query = 'update article set titre = "'.$titre.'", contenu = "'.$contenu.'", etat = "'.$etat.'", date_pub = "'.$date_pub.'", periode_pub_debut = "'.$periode_pub_debut.'", periode_pub_fin = "'.$periode_pub_fin.'" where id = '.$pub_id;
+            $query = 'update article set titre = "'.$titre.'", contenu = "'.$contenu.'", etat = "'.$etat.'", date_pub = "'.$date_pub.'", periode_pub_debut = "'.$periode_pub_debut.'", periode_pub_fin = "'.$periode_pub_fin.'", idcategorie = '.$idcategorie.' where id = '.$pub_id;
             $req = $this->db->simple_query($query); 
             
             if ($req) {

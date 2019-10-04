@@ -48,9 +48,15 @@ if (empty($details_actualite)) {
                                         <h2 class="blog-post-title"><?= $actualite['titre']; ?></h2>
                                         <p><?= $actualite['contenu']; ?></p>
                                         <p class="blog-post-meta">
-                                            Publier le <?= date("d/m/Y",strtotime($actualite['date_pub'])); ?> 
-                                            dans <a href="#">Catégorie</a>. 
-                                            <a class="text-white badge badge-primary text-wrap" href="<?= site_url('actualites'); ?>">Voir tout</a>
+                                            Publier le 
+                                            <?php 
+                                            if ($actualite['etat']=="Publier") 
+                                                echo date("d/m/Y",strtotime($actualite['date_pub'])); 
+                                            else if ($actualite['etat']=="Publier sur une période") 
+                                                echo date("d/m/Y",strtotime($actualite['periode_pub_debut'])); 
+                                            ?>
+                                            dans la catégorie <a href="#"><?= $actualite['categorie']; ?></a>. 
+                                            <a class="btn btn-primary btn-sm" href="<?= site_url('actualites'); ?>">Voir tout</a>
                                         </p>
                                     </div>
                                 </div>

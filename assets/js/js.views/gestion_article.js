@@ -28,6 +28,10 @@ $('#form_add_pub').validate({
             required : '<div class="alert alert-danger">Veuillez remplir le champ SVP</div>',
             valid : '<div class="alert alert-success">Valide</div>'
         },
+        categorie_article : {
+            required : '<div class="alert alert-danger">Veuillez remplir le champ SVP</div>',
+            valid : '<div class="alert alert-success">Valide</div>'
+        },
         date_pub : {
             required : '<div class="alert alert-danger">Veuillez remplir le champ SVP</div>',
             pattern : '<div class="alert alert-danger">Veuillez saisir votre Numéro. EX: 9999-99-99</div>',
@@ -72,6 +76,10 @@ $('#form_update_pub').validate({
             required : '<div class="alert alert-danger">Veuillez remplir le champ SVP</div>',
             valid : '<div class="alert alert-success">Valide</div>'
         },
+        categorie_article : {
+            required : '<div class="alert alert-danger">Veuillez remplir le champ SVP</div>',
+            valid : '<div class="alert alert-success">Valide</div>'
+        },
         date_pub_m : {
             required : '<div class="alert alert-danger">Veuillez remplir le champ SVP</div>',
             pattern : '<div class="alert alert-danger">Veuillez saisir votre Numéro. EX: 9999-99-99</div>',
@@ -93,7 +101,6 @@ $('#form_update_pub').validate({
 
 //Récuperer la valeur de l'identifiant
 function get_pub_info(id_pub=0) {
-
     if (id_pub==0) {
         $('#msg_chargement').show("slow");
     } else {
@@ -109,10 +116,12 @@ function get_pub_info(id_pub=0) {
                 pub_data.forEach(function(pub)
                 {
                     $('#titre_i').val(pub['titre']);
+
                     $('#contenu_i').text(pub['contenu']);
                     $('#compte_i').val(pub['user']);
                     $('#date_creation_i').val(pub['date_creation']);
                     $('#etat_article_i').val(pub['etat']);
+                    $('#categorie_article_i').val(pub['categorie']);
                     $('#date_pub_i').val(pub['date_pub']);
                     $('#periode_debut_i').val(pub['periode_pub_debut']);
                     $('#periode_fin_i').val(pub['periode_pub_fin']);
@@ -155,6 +164,7 @@ function get_pub_info2(id_pub=0) {
                     $('#compte_m').val(pub['user']);
                     $('#date_creation_m').val(pub['date_creation']);
                     $('#etat_article_m').val(pub['etat']);
+                    $('#categorie_article_m').val(pub['idcategorie']);
                     $('#date_pub_m').val(pub['date_pub']);
                     $('#periode_debut_m').val(pub['periode_pub_debut']);
                     $('#periode_fin_m').val(pub['periode_pub_fin']);

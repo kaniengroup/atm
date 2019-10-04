@@ -105,6 +105,11 @@
                                             <div class="sp-slide">
                                                 <img class="sp-image" src="../src/css/images/blank.gif"
                                                     data-src="http://bqworks.com/slider-pro/images/image9_medium.jpg"/>                            
+                                                <p class="sp-layer sp-black sp-padding"
+                                                    data-horizontal="50" data-vertical="64%" 
+                                                    data-show-transition="left" data-show-delay="400" data-hide-transition="left" data-hide-delay="500">
+                                                    <?= $article['categorie']; ?>
+                                                </p>
 
                                                 <p class="sp-layer sp-white sp-padding hide-small-screen" 
                                                     data-position="bottomLeft" data-horizontal="50" data-vertical="50"
@@ -123,11 +128,21 @@
                                             foreach ($list_articles_recents as $article):
                                         ?>  
                                             <div class="sp-thumbnail">
-                                                <div class="sp-thumbnail-title">
-                                                    <?= $article['titre']; ?>
+                                                <div class="sp-thumbnail-title" style="font-size: 10px;">
+                                                    <?php
+                                                    if (strlen($article['titre'])>30)
+                                                        echo substr($article['titre'],0,30).' ...';
+                                                    else
+                                                        echo $article['titre'];
+                                                    ?>
                                                 </div>
-                                                <div class="sp-thumbnail-description">
-                                                    <?= substr($article['contenu'],0,20).' ...'; ?>
+                                                <div class="sp-thumbnail-description" style="font-size: 10px;">
+                                                    <?php
+                                                    if (strlen($article['contenu'])>35)
+                                                        echo substr($article['contenu'],0,35).' ...';
+                                                    else
+                                                        echo $article['contenu'];
+                                                    ?>
                                                     <br>
                                                     <a href="<?= site_url('actualites/view/'.$article['id']); ?>">Continuer la lecture</a>    
                                                 </div>

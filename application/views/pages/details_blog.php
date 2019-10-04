@@ -97,7 +97,7 @@ if (empty($details_blog)) {
                                             <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="2"></textarea>
                                         </div>
                                         <?php 
-                                        if ($this->session->userdata('userPseudo')) {
+                                        if (!$this->session->userdata('userPseudo')) {
                                         ?>
                                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#btn_connexion">
                                               Poster

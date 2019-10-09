@@ -23,6 +23,7 @@
 	outline: none;
 }
 
+
 .calendar .btn:hover{
 	background-color: rgba(0, 0, 0, 0);
 }
@@ -46,7 +47,7 @@
 	width: 100%;
 	height: 150px;
 	padding:0;
-	background-color: #704e2e;
+	background-color:#3e4f69;
 	/*padding: 0 0.5em;*/
 }
 
@@ -234,7 +235,7 @@
 }
 
 .current-day-block{
-	background-color: #76b041;
+	background-color: #ff7d1f;
 }
 
 .current-day{
@@ -242,7 +243,7 @@
 }
 
 .calendar .calendar-footer{
-	background-color: #704e2e;
+	background-color: #ff7d1f;
 	padding: 0 1em;
 }
 

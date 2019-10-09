@@ -1,6 +1,16 @@
 span.ok{
     font-size: 100px !important;
 }
+
+.navbar_footer{
+    font-family: 'ApexNew-Medium';
+    font-size: 18px;
+}
+
+.link_footer:hover{
+    color: #ffffff;
+}
+
 .text_one_actu{
    text-align: center;
     margin-top: 25%;

@@ -19,7 +19,7 @@
         <div class="container bg-white">
             <div class="row bg-white p-1">
                 <div class="col-md-8">
-                    <img src="<?php echo base_url('assets/img/LOGO-ATM.png'); ?>" class="logo_officiel_ATM" id="logo_ATM" alt="">
+                  <a href="<?php echo site_url('accueil') ?>"><img src="<?php echo base_url('assets/img/LOGO-ATM.png'); ?>" class="logo_officiel_ATM" id="logo_ATM" alt=""></a> 
                 </div>
                 <div class="col-md-4 follow text-white">
                     <div class="right">
@@ -90,56 +90,64 @@
     <div class="container fb-color">
         <div class="row p-5">
             <div class="col-md-4 text-center p-3">
-            <span class="text-white m-3">Suivez-Moi :</span>
-            <button class="btn bg-white btn--icon tw-color"><i class="fab fa-facebook-f"></i></button>
-            <button class="btn bg-white btn--icon tw-color"><i class="fab fa-twitter"></i></button>
-            <button class="btn bg-white btn--icon tw-color"><i class="fab fa-flickr"></i></button>
-            <button class="btn bg-white btn--icon tw-color"><i class="fab fa-youtube"></i></button>
-            <div class="col-12  text-left text-white m-3">
-                <i class="fas fa-phone-square fa-lg"></i> +225 22 52 43 69
+            <span class="text-white m-3 navbar_footer">Suivez-Moi :</span>
+                <a href="https://www.facebook.com/mabritoikeusse/" target="_blank">
+                    <button class="btn bg-white btn--icon tw-color"><i class="fab fa-facebook-f"></i></button>
+                </a>
+                <a href="https://twitter.com/atmabri" target="_blank">
+                    <button class="btn bg-white btn--icon tw-color"><i class="fab fa-twitter"></i></button>
+                </a>
+                <a href="https://www.flickr.com/photos/184731917@N05" target="_blank">
+                    <button class="btn bg-white btn--icon tw-color"><i class="fab fa-flickr"></i></button>
+                </a>
+                <a href="https://www.youtube.com/channel/UCJ2JEVbaUHkSRPO2i0dDWgw" target="_blank">
+                <button class="btn bg-white btn--icon tw-color"><i class="fab fa-youtube"></i></button>
+                </a>
+            <div class="col-12  text-left text-white m-3 ">
+                <i class="fas fa-phone-square fa-lg "></i> +225 22 52 43 69
             </div>
-            <div class="col-12  text-left text-white m-3">
+            <div class="col-12  text-left text-white m-3 ">
                 <i class="fas fa-phone-square fa-lg"></i> atm-info@atm.ci
             </div>
 
             </div>
             <div class="col-md-4 text-center">
                 <div class="row col-md-12 text-white">
-                    <div class="col-md-6">
+                    <div class="col-md-6 navbar_footer">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item" >
-                                <a href="<?php echo site_url('accueil') ?>">Accueil</a>
+                                <a class="link_footer" href="<?php echo site_url('accueil') ?>">Accueil</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="<?php echo site_url('portrait') ?>">Portrait</a>   
+                                <a class="link_footer" href="<?php echo site_url('portrait') ?>">Portrait</a>   
                             </li>
                             <li class="list-group-item">
-                                <a href="<?php echo site_url('blog') ?>">Blog</a>
+                                <a class="link_footer" href="<?php echo site_url('blog') ?>">Blog</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 navbar_footer">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
-                                <a href="<?php echo site_url('actualites') ?>">Actualités</a>
+                                <a class="link_footer" href="<?php echo site_url('actualites') ?>">Actualités</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="<?php echo site_url('agenda') ?>">Agenda</a>
+                                <a class="link_footer" href="<?php echo site_url('agenda') ?>">Agenda</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="<?php echo site_url('contacts') ?>">Contacts</a>
+                                <a class="link_footer" href="<?php echo site_url('contacts') ?>">Contacts</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 bg_article_liste  p-3">
+            <div class="col-md-4 bg_article_liste  p-3 navbar_footer">
                 <span class="tw-color text-center" id="exampleemail">Abonnez-vous à la Newsletter</span>
                 <form id="newsletter">
                 <div class="form-group border-primary p-3">
                     <input type="text" class="form-control" id="newsletter" name="newsletter" data-required="true" data-describedby="newsletterHelp" data-description="newsletter" aria-describedby="newsletterHelp">
                     <small id="newsletterHelp" class="text-muted"></small>
-                    <button type="submit" class="btn btn-primary mt-3">Abonnez</button>
+                    <button type="submit" class="btn btn-primary mt-3 navbar_footer">Abonnez</button>
                     
 
                 </div> 
@@ -147,7 +155,7 @@
             </div>
             <div class="col-md-12 align-self-end text-white text-center ">
                 © 2019 KanienGroup:
-                <a href="">Kanien Group</a>
+                <a href="https://www.facebook.com/dejacques01">Kanien Group</a>
             </div>
         </div>
     </div>

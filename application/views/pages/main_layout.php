@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/calendar/calendar-style.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/fonts/Apex/style.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/vendors/bower_components/fontawesome/css/all.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/vendors/bower_components/fontawesome/css/all.min.css'); ?>">
     <!-- App styles -->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/app.min.css'); ?>">
     <link rel="stylesheet" type="text/css"  media="screen" href="<?php echo base_url('assets/scripts_add/css/slider-pro.min.css'); ?>"/>

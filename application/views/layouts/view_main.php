@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="<?= css_url('assets/vendor/fontawesome-free/css/','all.min'); ?>">
 
     <!-- Page level plugin CSS-->
-    <link rel="stylesheet" href="<?= css_url('assets/vendor/datatables/','dataTables.bootstrap4'); ?>">
+    <link rel="stylesheet" href="<?= css_url('assets/vendor/datatables/','dataTables.bootstrap4.min'); ?>">
 
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="<?= css_url('assets/css/','sb-admin'); ?>">
@@ -152,8 +152,8 @@
     <script src="<?= js_url('assets/vendor/jquery-easing/','jquery.easing.min'); ?>"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="<?= js_url('assets/vendor/datatables/','jquery.dataTables'); ?>"></script>
-    <script src="<?= js_url('assets/vendor/datatables/','dataTables.bootstrap4'); ?>"></script>
+    <script src="<?= js_url('assets/vendor/datatables/','jquery.dataTables.min'); ?>"></script>
+    <script src="<?= js_url('assets/vendor/datatables/','dataTables.bootstrap4.min'); ?>"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="<?= js_url('assets/js/','sb-admin.min'); ?>"></script>
